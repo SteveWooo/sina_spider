@@ -1,6 +1,15 @@
 const config = require('../config.json');
 
+function init(){
+	global.weibo = {
+		mq : {
+			jobs : []
+		}
+	};
+}
+
 module.exports = ()=>{
+	init();
 	let weibo = {
 		config : config,
 		web : {
