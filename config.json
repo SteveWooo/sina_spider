@@ -1,0 +1,19 @@
+{
+	"base_url" : "https://weibo.cn",
+	"user" : {
+		"cookie" : "SUB=_2A252UeNPDeRhGedH7FQT8i3MyD6IHXVVvY0HrDV6PUJbkdAKLUuikW1NUJqmWS-FL2EqWJ0SrjlvDUdU0525lq3_;"
+	},
+	"api" : {
+		"user" : {
+			"profile" : "/%id",
+			"fallow" : "/%id/follow",
+			"fans" : "/%id/fans"
+		}
+	},
+	"control" : {
+		"sleep" : 1000
+	},
+	"util" : {
+		"data_path" : "./data"
+	}
+}
