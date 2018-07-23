@@ -4,9 +4,8 @@ function get_work(){
 
 async function run(weibo){
 	let job = get_work();
-	console.log(job)
 	if(job!=undefined){
-		await weibo.controller[job.controller].mq_event(weibo, job.data);
+		await weibo.controller[job.controller].mq_event(weibo, job);
 	}
 
 	setTimeout(function(){

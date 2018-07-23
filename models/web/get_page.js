@@ -39,7 +39,7 @@ module.exports = async (weibo, info)=>{
 			"cookie" : weibo.config.user.cookie
 		}
 	}
-
+	console.log(option);
 	let content = await req(weibo, option);
 	return content;
 }

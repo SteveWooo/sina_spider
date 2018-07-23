@@ -21,7 +21,9 @@ module.exports = ()=>{
 			get_user_in_fans : require('./analyze/get_user_in_fans'),
 		},
 		storage : {
-			save_user : require('./storage/save_user')
+			save_user : require('./storage/save_user'),
+			kv_parse : require('./storage/kv_parse'),
+			kv_stringify : require('./storage/kv_stringify')
 		},
 		util : {
 			error : require('./utils/error')
