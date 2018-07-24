@@ -1,21 +1,21 @@
-exports.init = (weibo)=>{
-	// push event to mq
-	for(var i=1;i<=72;i++){
-		let job = {
-			controller : "collect_uid",
-			data : {
-				query : {
-					page : i
-				}
-			}
-		}
-		weibo.mq.core.push_job(weibo, job);
-	}
-}
+// exports.init = (weibo)=>{
+// 	// push event to mq
+// 	for(var i=1;i<=72;i++){
+// 		let job = {
+// 			controller : "collect_uid",
+// 			data : {
+// 				query : {
+// 					page : i
+// 				}
+// 			}
+// 		}
+// 		weibo.mq.core.push_job(weibo, job);
+// 	}
+// }
 
 async function run(weibo, job){
 	let result = await weibo.web.get_page(weibo, {
-		page_url : "/1976223032/follow",
+		page_url : "/"+job.data.main_uid+"/follow",
 		query : job.data.query
 	});
 	if(result.code != 2000){

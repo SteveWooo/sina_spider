@@ -10,5 +10,8 @@ file :
 */
 module.exports = async(weibo, user)=>{
 	let data_path = weibo.config.util.data_path + "/users";
-	fs.appendFileSync(data_path, weibo.storage.kv_stringify(weibo, user));
+	let user_check = await weibo.storage.get_user(weibo, user);
+	if(!user_check){
+		fs.appendFileSync(data_path, weibo.storage.kv_stringify(weibo, user));
+	}
 }

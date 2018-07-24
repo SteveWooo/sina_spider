@@ -15,5 +15,9 @@
 	},
 	"util" : {
 		"data_path" : "./data"
+	},
+	"mq" : {
+		"max_job" : 10000,
+		"cache_path" : "./mq/job_cache"
 	}
 }

@@ -1,6 +1,5 @@
 module.exports = (weibo, kv)=>{
 	let result = "";
-	console.log(kv)
 	for(var i in kv){
 		result += "`" + i + "=" + kv[i];
 	}

@@ -4,8 +4,8 @@ weibo.controller = controller;
 let mq = require('./mq/init')(weibo);
 weibo.mq = mq;
 
-async function main(){
-	controller.collect_uid.init(weibo);
+async function main(weibo){
+	// controller.collect_uid_before.init(weibo);
 }
 
-main()
+main(weibo);
