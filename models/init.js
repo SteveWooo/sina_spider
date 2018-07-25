@@ -3,6 +3,8 @@ const config = require('../config.json');
 function init(){
 	global.weibo = {
 		mq : {
+			status : true,
+			next_run_time : 0,
 			jobs : []
 		}
 	};

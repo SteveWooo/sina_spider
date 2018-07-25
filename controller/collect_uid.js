@@ -20,6 +20,7 @@ async function run(weibo, job){
 	});
 	if(result.code != 2000){
 		console.log(result.message);
+		weibo.mq.core.push_fail(weibo, job);
 		return ;
 	}
 	let uids = await weibo.analyze.get_user_in_follow(weibo, result.content);

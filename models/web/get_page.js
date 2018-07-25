@@ -16,7 +16,6 @@ function req (weibo, option) {
 				resolve(weibo.util.error( 4000, '网络请求错误' ));
 				return ;
 			}
-
 			resolve({
 				code : 2000,
 				content : body
