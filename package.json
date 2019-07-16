@@ -1,27 +1,24 @@
 {
   "name": "sina_spider",
   "version": "1.0.0",
-  "description": "微博爬虫",
-  "main": "startup.js",
-  "dependencies": {
-    "request": "^2.87.0"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "node strtup.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SteveWooo/sina_spider.git"
   },
-  "keywords": [
-    "nodejs",
-    "spider"
-  ],
-  "author": "SteveWooo",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SteveWooo/sina_spider/issues"
   },
-  "homepage": "https://github.com/SteveWooo/sina_spider#readme"
+  "homepage": "https://github.com/SteveWooo/sina_spider#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "request": "^2.88.0"
+  }
 }

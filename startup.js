@@ -1,9 +1,15 @@
-let weibo = require('./models/init')();
-let controller = require('./controller/init')(weibo);
-let mq = require('./mq/init')(weibo);
 
-async function main(weibo){
-	// weibo.controller.collect_uid_before.init(weibo);
+async function main(){
+	var swc;
+	try{
+		swc = await require("./keke_stage/server/models/swc/init")();
+		swc = await require('./controllers/access')(swc, {});
+		swc.startup(swc);
+	}catch(e){
+		console.log(e);
+		process.exit();
+	}
 }
 
-main(weibo);
+main();
+	
