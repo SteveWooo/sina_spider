@@ -39,7 +39,7 @@ module.exports = async function(swc, options){
 			userInfo : userInfos[i]
 		})
 		var nextTime = 100 * (Math.ceil(Math.random() * 20 + 1))
-		console.log('next time : ' + nextTime);
+		// console.log('next time : ' + nextTime);
 		await waitting(nextTime);
 	}
 	swc.log.info(`like success, article id -- ${options.articleId}`);
