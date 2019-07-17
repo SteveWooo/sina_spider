@@ -16,13 +16,13 @@ function getLikeCount(swc, options){
 				return ;
 			}
 
-			var MODEL = '<div class="pms" id="cmtfrm">';
+			var MODEL = '<span class="pms">&nbsp;赞[';
 			if(body.indexOf(MODEL) < 0){
 				resolve(undefined);
 				return ;
 			}
 			body = body.substring(body.indexOf(MODEL) + MODEL.length);
-			var likeCount = body.substring(0, body.indexOf('人'));
+			var likeCount = body.substring(0, body.indexOf(']'));
 			resolve(parseInt(likeCount));
 		})
 	})
@@ -44,11 +44,11 @@ async function run(swc, options){
 			articleId : ids[0]
 		})
 
-		if(likeCount && likeCount < 10){
+		if(likeCount != undefined && likeCount < 10){
 			await swc.services.weibo.handle.like(swc, {
 				articleId : ids[0]
 			})
-		} else if (!likeCount){
+		} else if (likeCount == undefined){
 			swc.log.error('get article like count error, articleId -- ' + ids[0]);
 		} else {
 
