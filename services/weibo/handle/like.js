@@ -23,14 +23,24 @@ function like(swc, options){
 	})
 }
 
+function waitting (time){
+	return new Promise(resolve =>{
+		setTimeout(()=>{
+			resolve();
+		}, time);
+	})
+}
+
 module.exports = async function(swc, options){
 	var userInfos = await swc.services.weibo.dao.getUserInfos(swc, {});
-	userInfos.map(async (userInfo, index)=>{
+	for(var i=0;i<userInfos.length;i++){
 		await like(swc, {
 			articleId : options.articleId,
-			userInfo : userInfo
+			userInfo : userInfos[i]
 		})
-	})
-
+		var nextTime = 100 * (Math.ceil(Math.random() * 20 + 1))
+		console.log('next time : ' + nextTime);
+		await waitting(nextTime);
+	}
 	swc.log.info(`like success, article id -- ${options.articleId}`);
 }

@@ -13,7 +13,7 @@ async function run(swc, options){
 	}
 
 	var nextTime = Math.ceil(Math.random() * 30 + 30);
-	console.log('next time : ' + nextTime + " minutes");
+	console.log('cron like next time : ' + nextTime + " minutes");
 	setTimeout(async ()=>{
 		await run(swc, options);
 	}, nextTime * 60 * 1000);
