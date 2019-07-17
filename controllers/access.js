@@ -6,7 +6,8 @@ module.exports = async (swc, options)=>{
 	await swc.services.weibo.init(swc, {});
 
 	await swc.services.weibo.jobs.cronLike(swc, {
-		uid : '1976223032'
+		uid : '1564541782', //stevewoo
+		// uid : '1923212617', //kimo
 	})
 	return swc;
 }

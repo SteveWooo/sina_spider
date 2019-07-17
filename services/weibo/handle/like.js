@@ -15,7 +15,7 @@ function like(swc, options){
 			if(err || res.statusCode != 200){
 				swc.log.error(`like faile, account -- ${options.userInfo.username}`);
 				resolve();
-				console.log(option)
+				console.log(option);
 				return ;
 			}
 			resolve();
@@ -40,7 +40,7 @@ module.exports = async function(swc, options){
 		})
 		var nextTime = 100 * (Math.ceil(Math.random() * 20 + 1))
 		// console.log('next time : ' + nextTime);
-		await waitting(nextTime);
+		// await waitting(nextTime);
 	}
 	swc.log.info(`like success, article id -- ${options.articleId}`);
 }

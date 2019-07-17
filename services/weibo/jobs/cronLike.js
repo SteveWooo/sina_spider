@@ -3,11 +3,14 @@ async function run(swc, options){
 		uid : options.uid
 	})
 	if(ids != undefined){
-		for(var i=0;i<ids.length;i++){
-			await swc.services.weibo.handle.like(swc, {
-				articleId : ids[i]
-			})
-		}
+		// for(var i=0;i<ids.length;i++){
+		// 	await swc.services.weibo.handle.like(swc, {
+		// 		articleId : ids[i]
+		// 	})
+		// }
+		await swc.services.weibo.handle.like(swc, {
+			articleId : ids[0]
+		})
 	} else {
 		swc.log.error(`get article faile`);
 	}
