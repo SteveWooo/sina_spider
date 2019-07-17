@@ -1,0 +1,31 @@
+POST /sso/login HTTP/1.1
+Host: passport.weibo.cn
+Connection: keep-alive
+Content-Length: 234
+Origin: https://passport.weibo.cn
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Referer: https://passport.weibo.cn/signin/login?entry=mweibo
+&r=https%3A%2F%2Fweibo.cn%2F
+&backTitle=%CE%A2%B2%A9
+&vt=
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: SCF=Ags8gguPKXEylftmsrBsjqr303A5FCg1krGVEXbZrPEEISiMPtv0bPcy57KwbNtjMXCInf6Bgu04YG_BuQh1Utg.; _T_WM=0525d014c6d9b27032e89223d0ee33b2; login=dde7a7f5c0ea95ade5fba4db48f69db6; SUHB=0A0ZBiI10jmrmU; SUB=_2AkMqcoaHdcPxrARTmvkVzm3gbYhH-jyZp-9xAn7oJhMyPRh77lsSqSdutBF-XIycujydL8gDhK-_B5xwuhNFiRwJ
+
+username=tkxruiddqbro-euyp%40yahoo.com
+&password=IXexcauhqap17
+&savestate=1
+&r=https%3A%2F%2Fweibo.cn%2F
+&ec=0
+&pagerefer=https%3A%2F%2Fweibo.cn%2Fpub%2F%3Fvt%3D
+&entry=mweibo
+&wentry=
+&loginfrom=
+&client_id=
+&code=
+&qq=
+&mainpageflag=1
+&hff=
+&hfp=
