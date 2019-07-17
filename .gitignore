@@ -61,3 +61,5 @@ typings/
 # next.js build output
 .next
 keke_stage
+
+conf/config.prod.json
