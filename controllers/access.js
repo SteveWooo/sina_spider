@@ -1,11 +1,12 @@
 module.exports = async (swc, options)=>{
-	var userInfo = await swc.utils.weibo.login(swc, {
-		username : 'tkxruiddqbro-euyp@yahoo.com',
-		password : 'IXexcauhqap17'
+	swc = await swc.registerService(swc, {
+		serviceName : 'weibo',
+		path : `${__dirname}/../services/weibo/service`
+	})	
+	await swc.services.weibo.init(swc, {});
+
+	await swc.services.weibo.jobs.cronLike(swc, {
+		uid : '1976223032'
 	})
-
-	console.log(userInfo);
-
 	return swc;
 }
-	
