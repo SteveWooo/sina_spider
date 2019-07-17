@@ -62,5 +62,5 @@ typings/
 .next
 keke_stage
 
-conf/config.prod.json
+conf/config.*.json
 services/weibo/dao/userInfos
